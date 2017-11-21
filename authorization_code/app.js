@@ -14,7 +14,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = '8ef51628731f44f6a17abcdd6c5d741c'; // Your client id
 var client_secret = '456ef7a5a762487886ab6d776d2865cf'; // Your secret
-var redirect_uri = 'http://localhost:4200/callback'; // Your redirect uri
+var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -34,6 +34,12 @@ var generateRandomString = function(length) {
 var stateKey = 'spotify_auth_state';
 
 var app = express();
+
+app.use(function(req, res, next){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 app.use(express.static(__dirname + '/public'))
     .use(cookieParser());
@@ -141,5 +147,11 @@ app.get('/refresh_token', function(req, res) {
     });
 });
 
-console.log('Listening on 4200');
-app.listen(4200);
+app.get('/test', function(req,res){
+    res.writeHead(200, {"Content-Type": "application/json"});
+    res.write(JSON.stringify({clientid:client_id,clientsecret:client_secret}));
+    res.end();
+});
+
+console.log('Listening on 8888');
+app.listen(8888);

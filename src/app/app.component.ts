@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(private http: HttpClient){}
+
+  public login(){
+    this.http.get('http://localhost:8888/test').subscribe((res:Response) => {
+      console.log(res);
+    });
+  }
+
+  public chat(){
+    this.http.get('http://localhost:8888/chat').subscribe((res:Response) => {
+      console.log(res);
+    });
+  }
 }
