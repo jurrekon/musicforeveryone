@@ -24,6 +24,7 @@
     "cookie-parser": "^1.4.3",
     "core-js": "^2.4.1",
     "express": "^4.15.2",
+    "finalhandler": "^1.1.0",
     "rxjs": "^5.5.2",
     "socket.io": "^2.0.4",
     "zone.js": "^0.8.14"
