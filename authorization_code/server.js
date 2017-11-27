@@ -1,17 +1,19 @@
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+let app = require('express')();
+let http = require('http').Server(app);
+let io = require('socket.io')(http);
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/chat/index.html');
-});
+io.on('connection', (socket) => {
+  console.log('user connected');
 
-io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+
+  socket.on('add-message', (message) => {
+    io.emit('message', {type:'new-message', text: message});
   });
 });
 
-http.listen(8888, function(){
-  console.log('listening on *:8888');
+http.listen(5000, () => {
+  console.log('started on port 5000');
 });

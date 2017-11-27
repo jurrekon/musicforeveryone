@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
+import {ChatComponent} from "./chat/chat.component";
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Helios';
 
   constructor(private http: HttpClient){}
 

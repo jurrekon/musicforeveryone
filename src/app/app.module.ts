@@ -1,26 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
-import { AppRoutingModule } from './app-routing.module';
-
-const appRoutes: Routes = [
-  { path: 'chat', component: ChatComponent }
-];
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import { FormsModule } from '@angular/forms';
+import {searchPageComponent} from './searchPage';
+import { routes } from './app.router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChatComponent
+    ChatComponent,
+    searchPageComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+      FormsModule,
+      routes
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
