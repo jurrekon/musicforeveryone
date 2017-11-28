@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { searchPageComponent } from './searchPage';
 import { LyricsComponent } from './lyrics/lyrics.component';
 import { SongsComponent } from './songs/songs.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { routes } from './app.router';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { routes } from './app.router';
     ChatComponent,
     searchPageComponent,
     LyricsComponent,
-    SongsComponent
+    SongsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

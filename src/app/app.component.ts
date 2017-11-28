@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { ChatComponent } from "./chat/chat.component";
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
