@@ -6,7 +6,8 @@ import { ChatComponent } from './chat/chat.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { FormsModule } from '@angular/forms';
 import { searchPageComponent } from './searchPage';
-import {LyricsComponent} from './lyrics/lyrics.component';
+import { LyricsComponent } from './lyrics/lyrics.component';
+import { SongsComponent } from './songs/songs.component';
 import { routes } from './app.router';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { routes } from './app.router';
     AppComponent,
     ChatComponent,
     searchPageComponent,
-    LyricsComponent
+    LyricsComponent,
+    SongsComponent
   ],
   imports: [
     BrowserModule,
