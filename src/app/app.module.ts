@@ -6,13 +6,15 @@ import { ChatComponent } from './chat/chat.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { FormsModule } from '@angular/forms';
 import { searchPageComponent } from './searchPage';
+import {LyricsComponent} from './lyrics/lyrics.component';
 import { routes } from './app.router';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
-    searchPageComponent
+    searchPageComponent,
+    LyricsComponent
   ],
   imports: [
     BrowserModule,

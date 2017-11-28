@@ -2,7 +2,7 @@ import { Component, OnInit,OnDestroy } from '@angular/core';
 import { ChatService } from './chat.service';
 
 @Component({
-    moduleId: module.id,
+  moduleId: module.id,
   selector: 'chat-component',
   templateUrl: './chat.component.html',
   providers: [ChatService]
