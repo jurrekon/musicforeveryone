@@ -2,23 +2,26 @@
     <h2>Register</h2>
     <form name="form">
         <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" name="firstName"/>
+            <label for="firstname">First Name</label>
+            <input #firstname type="text" class="form-control" name="firstname"/>
         </div>
         <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" name="lastName"/>
+            <label for="lastname">Last Name</label>
+            <input #lastname type="text" class="form-control" name="lastname"/>
         </div>
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" class="form-control" name="username"/>
+            <input #username type="text" class="form-control" name="username"/>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" name="password"/>
+            <input #password type="password" class="form-control" name="password"/>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary">Register</button>
+            <button type="submit" (click)="createUser(firstname.value, lastname.value, username.value, password.value)" class="btn btn-primary">Register</button>
         </div>
     </form>
 </div>
+
+<br>
+{{ registerUser }}

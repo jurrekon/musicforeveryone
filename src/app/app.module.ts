@@ -24,7 +24,7 @@ import { routes } from './app.router';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
