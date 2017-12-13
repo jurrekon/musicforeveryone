@@ -10,6 +10,8 @@ class API extends CI_Controller {
 
     public function register()
     {
+        $test = json_decode($_POST);
+        createUser($test);
         $this->load->view('API/register');
     }
 }

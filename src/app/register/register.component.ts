@@ -16,13 +16,12 @@ export class RegisterComponent{
     constructor(private http: Http){}
     ngOnInit(){}
 
-    public createUser(firstname, lastname, username,password) {
-        
+    public createUser(firstname, lastname, username,password){
         this.user = new Register(firstname, lastname, username, password);
-    }
-
-    get registerUser(){
+        console.log(this.user);
         let headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post('http://localhost/musicforeveryone/CodeIgniter-3.1.5/index.php/API/register', JSON.stringify(this.user), {headers: headers})
+        return this.http.post('http://localhost:4100/register', JSON.stringify(this.user), {headers: headers}).subscribe(data => {
+            console.log(data);
+        });
     }
 }

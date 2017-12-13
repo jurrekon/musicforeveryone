@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { routes } from './app.router';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { routes } from './app.router';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     HttpClientModule,
       FormsModule,
       routes
