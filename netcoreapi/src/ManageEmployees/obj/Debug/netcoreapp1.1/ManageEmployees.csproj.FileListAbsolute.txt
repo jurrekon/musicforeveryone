@@ -1,0 +1,10 @@
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\bin\Debug\netcoreapp1.1\ManageEmployees.deps.json
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\bin\Debug\netcoreapp1.1\ManageEmployees.runtimeconfig.json
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\bin\Debug\netcoreapp1.1\ManageEmployees.runtimeconfig.dev.json
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\bin\Debug\netcoreapp1.1\ManageEmployees.dll
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\bin\Debug\netcoreapp1.1\ManageEmployees.pdb
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\obj\Debug\netcoreapp1.1\ManageEmployees.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\obj\Debug\netcoreapp1.1\ManageEmployees.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\obj\Debug\netcoreapp1.1\ManageEmployees.AssemblyInfo.cs
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\obj\Debug\netcoreapp1.1\ManageEmployees.dll
+C:\xampp\htdocs\CRUD\NetCoreAPI\src\ManageEmployees\obj\Debug\netcoreapp1.1\ManageEmployees.pdb
