@@ -2,19 +2,20 @@ import { Component } from '@angular/core';
 
 import { Http,Headers } from '@angular/http';
 import { AppComponent } from '../app.component';
+import { appService } from '../app.service';
 
 @Component({
     styleUrls:['login.component.css'],
     templateUrl: 'login.component.html',
     selector: 'login',
-    //providers:[SpotifyService]
+    providers:[appService]
 })
 
 export class LoginComponent{
     user;
-    firstname = '';
 
-    constructor(private http: Http){}
+    constructor(private http: Http,
+                private appService: appService){}
     ngOnInit(){}
 
     public login(username, password){
@@ -25,7 +26,8 @@ export class LoginComponent{
             console.log(data);
             var body = JSON.parse(data['_body']);
             if(body['status'] == 'succes'){
-                // set all the variables
+                this.appService.setName(username);
+                console.log(this.appService.name);
             } else {
                 // error
             }
