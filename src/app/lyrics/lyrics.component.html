@@ -1,1 +1,38 @@
-LYRICSSHIT
+<h4 >Departments <h4>
+    
+    <div class="row ">
+      <div class="input-field inline">
+        <input #filterString id="filter" type="text" class="validate" (input)="filterDepartments(filterString.value)" />
+        <label for="filter">Filter by name </label>
+      </div>
+    </div>
+    
+    <div class="row">
+            <div class="col s12 m4 " *ngFor="let department of departments">
+                    <div class="card z-depth-3">
+                            <div class="card-content">
+                                    <span class="card-title">
+                                            <b>{{department.name}}</b> 
+                                            <a (click)="removeDepartment(department); $event.stopPropagation()">
+                                                    <i class="small material-icons right red-text">delete</i>
+                                            </a>
+                                    </span>
+                                    <p> {{department.description}} </p>
+                            </div>
+                            <div class="card-action">
+                                    <a md-button class="btn blue-text" [routerLink]="['/department-edit',department.id]"><i class="material-icons left ">mode_edit</i>Edit</a>
+                                    <a md-button class="btn blue-text" [routerLink]="['/department-employees',department.id]" ><i class="material-icons left">recent_actors</i>Show Employees</a>
+                            </div>
+                    </div>
+            </div>
+    </div>
+    
+    
+    <div class="fixed-action-btn">
+        <a [routerLink]="['/department-new']"  class="btn-floating btn-large blue waves-effect waves-light ">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+    
+    <!--This div is used to display toastr message-->
+    <div id="toast-container" style="top: auto !important; left: auto !important; bottom: 10%; right:5%;"></div>
