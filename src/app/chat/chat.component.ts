@@ -11,12 +11,14 @@ export class ChatComponent implements OnInit, OnDestroy {
   messages = [];
   connection;
   message;
+  username;
 
   constructor(private chatService:ChatService) {}
 
   sendMessage()
   {
-    this.chatService.sendMessage(this.message);
+    this.message = this.username+': '+this.message;
+    this.chatService.sendMessage( this.message);
     this.message = '';
   }
 

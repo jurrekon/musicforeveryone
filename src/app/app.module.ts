@@ -9,7 +9,11 @@ import { searchPageComponent } from './searchPage';
 import { LyricsComponent } from './lyrics/lyrics.component';
 import { SongsComponent } from './songs/songs.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { routes } from './app.router';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -18,10 +22,14 @@ import { routes } from './app.router';
     searchPageComponent,
     LyricsComponent,
     SongsComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     HttpClientModule,
       FormsModule,
       routes
